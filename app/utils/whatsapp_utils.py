@@ -11,7 +11,7 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 import chromadb
 
 client = chromadb.PersistentClient(path="app/chromadb_data")
-llm = ChatOpenAI(api_key='key',model="gpt-4-1106-preview")
+llm = ChatOpenAI(api_key="key",model="gpt-4-1106-preview")
 openai_client=OpenAI(api_key='key')
 collection = client.get_or_create_collection(name="test1")
 # from app.services.openai_service import generate_response
